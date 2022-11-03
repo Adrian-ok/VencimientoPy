@@ -11,7 +11,11 @@ class Login(QMainWindow):
         super(Login, self).__init__(parent)
         loadUi("Login.ui", self)
 
+        self.txtUsuario.setFocus()
         self.btnLogin.clicked.connect(lambda: control.iniciarSesion(self, Ui_MainWindow, Login))
+        # self.btnLogin.returnPressed.connect(lambda: control.iniciarSesion(self, Ui_MainWindow, Login))
+        self.txtUsuario.returnPressed.connect(lambda: self.txtContra.setFocus())
+        self.txtContra.returnPressed.connect(lambda: self.btnLogin.setFocus())
 
 if __name__ == "__main__":
     mi_aplicacion = QApplication(sys.argv)
