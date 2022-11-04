@@ -31,7 +31,7 @@ class controlMain():
         self.vence = f.toPyDate() #en f la fecha esta separada por comas y como entero, toPyDate() lo convierte a fecha separado con -
         #------------------------------------------#
         self.id_usuario = self.txtNroU.text()
-        self.obs = self.txtObs.toPlainText().upper()
+        # self.obs = self.txtObs.toPlainText().upper()
         self.nroT = self.txtNroT.text()
 
         if self.checkBox.isChecked():
@@ -39,7 +39,8 @@ class controlMain():
         else:
             self.cerrado = "1"
 
-        self.detalle = self.txtDetalle.toPlainText().upper()
+        self.obs = self.txtObs.text().upper()
+        self.detalle = self.txtDetalle.text().upper()
 
         miCrud = baseDatos()
         

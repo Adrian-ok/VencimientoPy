@@ -13,7 +13,6 @@ class Login(QMainWindow):
 
         self.txtUsuario.setFocus()
         self.btnLogin.clicked.connect(lambda: control.iniciarSesion(self, Ui_MainWindow, Login))
-        # self.btnLogin.returnPressed.connect(lambda: control.iniciarSesion(self, Ui_MainWindow, Login))
         self.txtUsuario.returnPressed.connect(lambda: self.txtContra.setFocus())
         self.txtContra.returnPressed.connect(lambda: control.iniciarSesion(self, Ui_MainWindow, Login))
         
