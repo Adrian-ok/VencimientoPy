@@ -130,6 +130,7 @@ class controlMain():
         self.dateCarga.setDate(QtCore.QDate.currentDate())
         self.dateVencimiento.setSelectedDate(QtCore.QDate.currentDate())
         self.estado = "NUEVO"
+        # self.frame.txtUser.setFocus()
         # self.dateVencimiento.setDate(QtCore.QDate.currentDate())
 
 #-------------------------------------------------------------------------------#

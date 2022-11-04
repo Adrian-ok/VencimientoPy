@@ -354,8 +354,7 @@ class Ui_MainWindow(object):
         self.frame3.hide()
         self.txtNroU.hide()
         self.txtCerrado.hide()
-        
-        
+        self.txtUser.setDisabled(True)
 
 #-------------------------------------------------------------------------------#
 #BOTONES
@@ -369,7 +368,10 @@ class Ui_MainWindow(object):
         controlMain.mostrarVencimientos(self)
 
 #-------------------------------------------------------------------------------#
+#SET-FOCUS
+        self.btnAnadir.clicked.connect(lambda: self.txtDias.setFocus())
 
+#-------------------------------------------------------------------------------#
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Recordatorio de Vencimientos"))

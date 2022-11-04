@@ -46,6 +46,14 @@ class baseDatos():
         cursor.close()
         return result
 
+    def verificacion(self, user, contra):
+        cursor = self.conexion.cursor()
+        sql = "SELECT * FROM usuarios WHERE usuario = {} AND contrasena = {};".format(user, contra)
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        cursor.close()
+        return result
+
     def Read(self, idu):
         cursor = self.conexion.cursor()
         sql = "SELECT CONVERT(fechacarga, CHAR), n_tramite, CONVERT(vence, CHAR), obs, detalle FROM vencimientos WHERE idusuario = {} AND cerrado = {}".format(idu, 0)
