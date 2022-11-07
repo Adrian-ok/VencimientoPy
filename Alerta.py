@@ -28,7 +28,7 @@ def notificacion(cant):
     notification = Notify()
     notification.title = "Vencimiento"
     notification.message = f"Se detectaron {cant} Vencimientos"
-    notification.icon = "img/fecha-de-vencimiento.png"
+    notification.icon = "C:/TRABAJO/VencimientoPy/img/fecha-de-vencimiento.png"
     
     return notification.send()
 
@@ -52,7 +52,7 @@ def funcion(list):
 
 # ---------------------------------------------------------------------#
 config = configparser.ConfigParser()
-config.read('Settings.dat')
+config.read('C:/TRABAJO/VencimientoPy/Settings.dat')
 usuario = (config['Usuarios']['usuario'])
 
 resultados=obtenerDatos(usuario)

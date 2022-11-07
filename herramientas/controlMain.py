@@ -172,7 +172,7 @@ class controlMain():
         self.txtUser.setText(self.usuario)
 
         self.frame2.hide()
-        self.pushButton.show()
+        self.pushButton.show() 
 
 
 

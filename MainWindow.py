@@ -106,7 +106,7 @@ class Ui_MainWindow(object):
         self.txtDias.setFont(font)
         self.txtDias.setObjectName("txtDias")
         self.txtNroT = QtWidgets.QLineEdit(self.frame)
-        self.txtNroT.setGeometry(QtCore.QRect(470, 40, 111, 31))
+        self.txtNroT.setGeometry(QtCore.QRect(440, 40, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.txtCerrado.setGeometry(QtCore.QRect(830, 40, 31, 31))
         self.txtCerrado.setObjectName("txtCerrado")
         self.btnGuardar = QtWidgets.QPushButton(self.frame)
-        self.btnGuardar.setGeometry(QtCore.QRect(470, 390, 161, 51))
+        self.btnGuardar.setGeometry(QtCore.QRect(500, 390, 161, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
@@ -215,7 +215,7 @@ class Ui_MainWindow(object):
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.label_6 = QtWidgets.QLabel(self.frame)
-        self.label_6.setGeometry(QtCore.QRect(470, 10, 111, 21))
+        self.label_6.setGeometry(QtCore.QRect(440, 10, 111, 21))
         font = QtGui.QFont()
         font.setFamily("Verdana")
         font.setPointSize(12)
@@ -231,7 +231,7 @@ class Ui_MainWindow(object):
         self.checkBox.setFont(font)
         self.checkBox.setObjectName("checkBox")
         self.label_7 = QtWidgets.QLabel(self.frame)
-        self.label_7.setGeometry(QtCore.QRect(470, 90, 111, 21))
+        self.label_7.setGeometry(QtCore.QRect(440, 90, 111, 21))
         font = QtGui.QFont()
         font.setFamily("Verdana")
         font.setPointSize(12)
@@ -240,7 +240,7 @@ class Ui_MainWindow(object):
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
         self.label_11 = QtWidgets.QLabel(self.frame)
-        self.label_11.setGeometry(QtCore.QRect(470, 210, 71, 21))
+        self.label_11.setGeometry(QtCore.QRect(440, 210, 71, 21))
         font = QtGui.QFont()
         font.setFamily("Verdana")
         font.setPointSize(12)
@@ -249,7 +249,7 @@ class Ui_MainWindow(object):
         self.label_11.setFont(font)
         self.label_11.setObjectName("label_11")
         self.frame2 = QtWidgets.QFrame(self.frame)
-        self.frame2.setGeometry(QtCore.QRect(200, 70, 561, 231))
+        self.frame2.setGeometry(QtCore.QRect(220, 70, 561, 231))
         self.frame2.setStyleSheet("background-color: rgb(85, 170, 127);")
         self.frame2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame2.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -267,7 +267,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tablaUsuarios.setHorizontalHeaderItem(1, item)
         self.txtObs = QtWidgets.QLineEdit(self.frame)
-        self.txtObs.setGeometry(QtCore.QRect(470, 120, 381, 51))
+        self.txtObs.setGeometry(QtCore.QRect(440, 120, 431, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -276,7 +276,7 @@ class Ui_MainWindow(object):
         self.txtObs.setFont(font)
         self.txtObs.setObjectName("txtObs")
         self.txtDetalle = QtWidgets.QLineEdit(self.frame)
-        self.txtDetalle.setGeometry(QtCore.QRect(470, 240, 381, 51))
+        self.txtDetalle.setGeometry(QtCore.QRect(440, 240, 431, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -368,6 +368,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
 #-------------------------------------------------------------------------------#
         self.filaTabla = 0
         self.selectedId = 0
@@ -394,7 +395,7 @@ class Ui_MainWindow(object):
 
 #-------------------------------------------------------------------------------#
 #SET-FOCUS
-        self.btnAnadir.clicked.connect(lambda: self.txtDias.setFocus())
+        self.btnAnadir.clicked.connect(lambda: controlMain.userSelect(self)) #lambda: self.txtDias.setFocus()
         self.txtDias.returnPressed.connect(lambda: self.txtNroT.setFocus())
         self.txtNroT.returnPressed.connect(lambda: self.txtObs.setFocus())
         self.txtObs.returnPressed.connect(lambda: self.txtDetalle.setFocus())
